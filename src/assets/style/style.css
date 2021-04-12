@@ -1,0 +1,76 @@
+/* custom css of react-date-picker-package and for backroundimage*/
+.bg_heart_image{
+    background-image: url("../images/heart-shape-outline@2x.png");
+    background-size: contain;
+    height: 20px;
+    width: 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bg_heart_black_image{
+    background-image: url("../images/heart-outline.png");
+    background-size: contain;
+    height: 20px;
+    width: 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bg_tick_image{
+    background-image: url("../images/checked.png");
+    background-size: contain;
+    height: 25px;
+    width: 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bg_Cross_image{
+    background-image: url("../images/close.png");
+    background-size: contain;
+    height: 20px;
+    width: 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.react-date-picker__wrapper {
+    border-radius: 4px!important;
+    border: thin solid #e2e8f0!important;
+    background: white!important;
+    padding: 10px;
+}
+.react-date-picker.react-date-picker--closed.react-date-picker--enabled{
+    padding: 0px!important;
+}
+.react-date-picker.react-date-picker--open.react-date-picker--enabled{
+    padding: 0px!important;
+}
+.mainWrapper{
+    display: flex;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index:111;
+    right:0;
+    top:0;
+    position: fixed;
+    left:0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.mainWrapper h2{
+    color:#fff
+}
+.loader{
+    width: 100px;
+    height: 100px
+}
+.w-90{
+    width: 90px;
+}
+.h-30{
+    height: 30px;
+}

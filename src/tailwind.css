@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.brand-text-color{
+    color: #d5205f;
+}
+.brand-text-color2{
+    color: #806BE7;
+}
+.brand-bg-color2{
+    background-color: #806BE7;
+}
+.f-48{
+    font-size: 48px;
+}

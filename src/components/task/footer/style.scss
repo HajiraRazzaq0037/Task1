@@ -1,0 +1,16 @@
+footer {
+  color: #ffffff;
+  background-color: #1a1a1a;
+  .ant-input-number-input,
+  .ant-input {
+    color: #ffffff;
+    background-color: #404040;
+    height: 45px;
+  }
+  .ant-form-item textarea.ant-input {
+    height: 210px;
+  }
+  button {
+    background-color: #16b6a1 !important;
+  }
+}
