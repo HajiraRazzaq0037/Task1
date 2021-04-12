@@ -38,7 +38,16 @@ const Footer = () => {
     const imgWindow = window.open(src);
     imgWindow.document.write(image.outerHTML);
   };
-
+  const rules = [
+    {
+      required: true,
+      message: "Please input your email",
+    },
+    {
+      type: "email",
+      message: "Please enter a valid email",
+    },
+  ];
   const onFinish = (values) => {
     form.validateFields().then((values) => {
       message.success("info successfully added");
@@ -65,15 +74,7 @@ const Footer = () => {
               >
                 <Row>
                   <Col lg={11} className="mx-2">
-                    <Form.Item
-                      name="email"
-                      rules={[
-                        {
-                          required: true,
-                          message: "Enter a valid email address",
-                        },
-                      ]}
-                    >
+                    <Form.Item name="email" rules={rules || ""}>
                       <Input placeholder="Enter a valid email address" />
                     </Form.Item>
                   </Col>
@@ -113,11 +114,15 @@ const Footer = () => {
                           required: true,
                           message: "Enter your phone (e.g. +14155552675)",
                         },
+                        {
+                          type: "number",
+                          message: "Please enter a valid number",
+                        },
                       ]}
                     >
                       <InputNumber
                         min={0}
-                        style={{ width: '100%' }}
+                        style={{ width: "100%" }}
                         placeholder="Enter your phone (e.g. +14155552675)"
                       />
                     </Form.Item>
