@@ -48,7 +48,7 @@ const Footer = () => {
       message: "Please enter a valid email",
     },
   ];
-  const onFinish = (values) => {
+  const onFinish = () => {
     form.validateFields().then((values) => {
       message.success("info successfully added");
       dispatch(userInfo(values));
@@ -64,13 +64,30 @@ const Footer = () => {
       <div className="container py-12">
         <Row>
           {info ? (
-            <div>user Info Added</div>
+            <Col>
+              <div className="font-bold py-4">user Info:</div>
+              <p>{info.email}</p>
+              <p>{info.name}</p>
+              <p>{info.address}</p>
+              <p>{info.phoneNumber}</p>
+              <div>
+                <Button
+                  className="font-bold h-6 w-36"
+                  onClick={() => {
+                    dispatch(userInfo(null));
+                  }}
+                >
+                  ReSet
+                </Button>
+              </div>
+            </Col>
           ) : (
             <Col lg={11}>
               <Form
                 layout="vertical"
                 onFinish={onFinish}
                 onFinishFailed={onFinishFailed}
+                form={form}
               >
                 <Row>
                   <Col lg={11} className="mx-2">

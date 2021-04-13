@@ -1,13 +1,13 @@
 import { SET_USER_INFO } from "./ActionTypes";
-// import { getItem, setItem } from "../../utils/functions";
+import { getItem, setItem } from "../../utils/functions";
 
 const INITIAL_STATE = {
-  userInfo: null,
+  userInfo: getItem("userInfo") || null,
 };
 const clubReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case SET_USER_INFO: {
-      // setItem("userInfo", action.payload);
+      setItem("userInfo", action.payload);
       return {
         ...state,
         userInfo: action.payload,
