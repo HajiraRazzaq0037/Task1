@@ -2,7 +2,7 @@ import { SET_USER_INFO } from "./ActionTypes";
 import { getItem, setItem } from "../../utils/functions";
 
 const INITIAL_STATE = {
-  userInfo: getItem("userInfo") || null,
+  userInfo: getItem("userInfo") || [],
 };
 const clubReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
